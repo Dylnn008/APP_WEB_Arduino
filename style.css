@@ -1,0 +1,163 @@
+/*CREADO CON IA, MODIFICADO POR MI*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* WEB*/
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #0f1220;
+    color: #e8eaf6;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #2a3158;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+#txtPrincipal h1 {
+    font-size: 1.4rem;
+    color: #00e5ff;
+    letter-spacing: 2px;
+}
+
+/*BOTON CONNECT*/
+#btnConnect {
+    background-color: transparent;
+    color: #00e5ff;
+    border: 2px solid #00e5ff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnConnect:hover {
+    background-color: #00e5ff;
+    color: #0f1220;
+}
+
+/* ZONA DE CONTROLES*/
+main {
+    flex: 1;                 /* ocupa todo el espacio libre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    background-color: #1a1f36;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
+section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* El primer grupo tiene los botones 1 y 2 en fila */
+section > div:first-child {
+    flex-direction: row;
+}
+
+
+/*BOTONES DE CONTROL*/
+section button {
+    min-width: 90px;
+    min-height: 70px;       
+    background-color: #2a3158;
+    color: #e8eaf6;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;       
+}
+
+section button:hover {
+    background-color: #38417a;
+}
+
+section button:active {
+    background-color: #00e5ff;
+    color: #0f1220;
+    transform: scale(0.95);
+}
+
+/*VELOCIDAD*/
+label {
+    font-size: 1rem;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 200px;
+    height: 10px;
+    cursor: pointer;
+    accent-color: #00e5ff;  
+}
+
+/*FOOTER*/
+footer {
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #8890b5;
+}
+
+/*CELULAR EN VERTICAL*/
+@media (max-width: 700px) {
+    header {
+        padding: 10px 12px;
+    }
+
+    #txtPrincipal h1 {
+        font-size: 1rem;
+    }
+
+    section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section > div:first-child {
+        flex-direction: row;
+    }
+
+    section > div:last-child {
+        flex-direction: row;
+    }
+
+    input[type="range"] {
+        width: 250px;
+    }
+}
